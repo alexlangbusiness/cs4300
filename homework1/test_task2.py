@@ -1,4 +1,6 @@
 #Test file for task 2
+#Each function checks to see if each main function is actually an instance
+#Then double checks the variable type, and verifies expected values 
 import task2
 
 def test_integer():

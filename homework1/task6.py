@@ -1,4 +1,6 @@
 #Task 6
+#Program counts the number of words in a text file
+#The text is inputted, extracted, and uses pythons built in len function to count the characters
 
 def countWords(fileName):
 

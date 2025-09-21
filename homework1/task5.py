@@ -1,5 +1,7 @@
-#Task 5
-
+#Task 5 Lists and Dictionaries
+#Program defines a dictionary of books, and a list of students
+#The program wants to ensure that the values within these data structures can be properly accessed
+#These values are then printed
 def data():
 
     books = [

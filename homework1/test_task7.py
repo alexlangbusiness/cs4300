@@ -1,3 +1,5 @@
+#Test file for task 7 
+#Just confirms that values of these operations
 import task7
 
 def test_calculate_abs():

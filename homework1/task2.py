@@ -25,7 +25,7 @@ def main():
 
 
 
-
+#If script is ran directly for testing, call main
 if __name__ == "__main__":
 
     main()
