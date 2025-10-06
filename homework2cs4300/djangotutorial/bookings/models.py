@@ -26,14 +26,13 @@ class Seat(models.Model):
         return f"{self.seatNumber} - {self.movie.title}"
 
 class Booking(models.Model):
-
+    user = models.CharField(max_length=100)   # <-- NEW: store user name or ID as text
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    bookingDate = models.DateTimeField(auto_now_add=True)
+    booked_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} - {self.movie.title} - {self.seat.seat_number}"
+        return f"{self.user} booked {self.seat} for {self.movie}"
 
 
 

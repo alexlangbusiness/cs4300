@@ -18,6 +18,8 @@ router.register(r'bookings', BookingViewSet)
 
 urlpatterns = [
     path('', views.movie_list, name='movie_list'),  # home page
-    path('book/<int:movie_id>/', views.seat_booking, name='seat_booking'),
+    path('book/<int:movie_id>/', views.seat_booking, name='book_seat'),
     path('booking-history/', views.booking_history, name='booking_history'),
+
+     path('api/', include(router.urls)),   
 ]

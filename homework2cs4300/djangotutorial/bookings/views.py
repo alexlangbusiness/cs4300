@@ -23,7 +23,7 @@ class BookingViewSet(viewsets.ModelViewSet):
 def movie_list(request):
 
     movies = Movie.objects.all()
-    context = {'movies': movies}
+    
     return render(request, 'bookings/movie_list.html', {'movies': movies})
 
 def seat_booking(request, movie_id):
