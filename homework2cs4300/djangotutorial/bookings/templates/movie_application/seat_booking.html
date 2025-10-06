@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Seats for {{ movie.title }}</title>
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <h2>Seats</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {% for seat in seats %}
+            <input type="checkbox" name="selected_seats" value="{{ seat.id }}"
+                   {% if seat.is_booked %} disabled {% endif %}>
+            Seat {{ seat.seat_number }}<br>
+        {% endfor %}
+        <button type="submit">Book Selected Seats</button>
+    </form>
+</body>
+</html>

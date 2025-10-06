@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Booking History</title>
+</head>
+<body>
+    <h1>Booking History</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li>
+                Movie: {{ booking.movie.title }} |
+                Seat: {{ booking.seat.seat_number }} |
+                Date: {{ booking.booking_date }}
+            </li>
+        {% empty %}
+            <li>No bookings yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

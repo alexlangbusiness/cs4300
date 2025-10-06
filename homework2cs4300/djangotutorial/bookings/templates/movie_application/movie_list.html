@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Listings</title>
+</head>
+<body>
+    <h1>Available Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <a href="{% url 'seat_booking' movie.id %}">{{ movie.title }}</a>
+                ({{ movie.release_date }})
+            </li>
+        {% empty %}
+            <li>No movies available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
