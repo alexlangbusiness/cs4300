@@ -32,7 +32,8 @@ Run Instructions
 
 11. Unit and Integration tests can be ran using the command python manage.py test bookings  
 
- 
+
+ ChatGTP was used to help write/troubleshoot the unit/intergation testing. 
 
  
 
