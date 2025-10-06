@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from django.contrib.auth import views as auth_views
 
 def home(request):
     return HttpResponse("Welcome to Django!")
@@ -26,4 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     path('', include('bookings.urls')),
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    
 ]
